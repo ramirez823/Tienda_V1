@@ -1,0 +1,65 @@
+body{
+    background-color: bisque;
+    font-family: sans-serif;
+    margin: 0;
+    
+    
+}
+
+header{
+    position: fixed;
+    background-color: rgb(50,75,125);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    
+}
+
+aside{
+    position: fixed;
+    background-color: rgb(125,50,75);
+    top: 100px;
+    left: 0;
+    bottom: 20px;
+    width: 20%;
+
+    
+}
+
+section{
+    overflow-y: scroll;
+    position: fixed;
+    background-color: rgb(75,125,50);
+    top: 100px;
+    left: 20%;
+    bottom: 20px;
+    width: 80%;
+    padding: 12px;
+    
+
+    
+}
+
+footer{
+    position: fixed;
+    background-color: black;
+    color: white;
+    left: 0%;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+}
+nav a {
+    text-decoration: none;
+    color:white;
+    font-size: 23px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #000033;
+    font-size: 18px;
+    animation-delay: 2s;
+}
