@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- esta es la primera pagina html-->
+<html>
+    <head>
+        <title>Tech Shop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body> 
+        <header class="encabezado">
+            
+            <nav class="<nav>">
+                <a class="nav-link logo" href="index.html">Tech Shop</a>
+                <ul class ="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="ejemplo7.html">&triangleleft;</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="ejemplo2.html">&triangleright;</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="audio.html">&Audios;</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="video.html">&videos;</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="iframe.html">&iFrames;</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="formilario.html">&Formulario;</a></li>
+                </ul>
+            </nav>
+            
+      
+            
+        </header>
+        <aside>
+            <h1>Formularios</h1>
+            <h2>Uso de Forms en HTML</h2>
+        </aside>
+        <section>
+            <h2>Bienes Raices el pueblo</h2>
+            <article>
+                <h3>Ingrese los datos de su propiedad</h3>
+                <form method="post" action="propiedad/incluir">
+                    Correo Electronico: <input type="email" name="correo" value="" size="45" /><br/>
+                    Contraseña: <input type="password" name="clave" value="" size="10" /><br/>
+                    Provincia: <select name="provincia">
+                        <option>San Jose</option>
+                        <option>Alajuela</option>
+                        <option>Cartago</option>
+                        <option>Heredia</option>
+                        <option>Guanacaste</option>
+                        <option>Puntarenas</option>
+                        <option>Limon</option>
+                    </select><br/>
+                    Direccion Exacta:<textarea name="direccion" rows="6" cols="60">
+                    </textarea><br/>
+                    Monto Base:<input type="number" name="monto" value="3000000" />
+                    <input type="submit" value="Enviar" />
+                </form>
+                </article>
+        </section>
+        <footer>
+            TechShop Derechos Reservados 2024 &COPY;
+        </footer>
+     </body>
+</html>
