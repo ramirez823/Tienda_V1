@@ -22,4 +22,9 @@ public interface ProductoService {
     public void delete(Producto producto);
     
     
+    //retorna una lista de productos que se encuentran en un  rango de precios
+    public List<Producto> consulta1(
+            double precioInf,double precioSup);
+    
+    
 }
