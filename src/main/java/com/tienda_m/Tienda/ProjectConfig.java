@@ -2,8 +2,10 @@ package com.tienda_m.Tienda;
 
 import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -47,6 +49,17 @@ public class ProjectConfig
         registro.addInterceptor(localeChangeInterceptor());
 
     }
+
+    /* Este método se utiliza al enviar correos de activación, según el idioma*/
+    @Bean("messageSource")
+    public MessageSource messageSource() {
+        ResourceBundleMessageSource messageSource
+                = new ResourceBundleMessageSource();
+        messageSource.setBasenames("messages");
+        messageSource.setDefaultEncoding("UTF-8");
+        return messageSource;
+    }
+
 
     /* Los siguiente métodos son para implementar el tema de seguridad dentro del proyecto */
     @Override
@@ -112,17 +125,13 @@ public class ProjectConfig
     @Autowired
     private UserDetailsService userDetailsService;
 
-
-    @Autowired public void configurerGlobal( 
+    @Autowired
+    public void configurerGlobal(
             AuthenticationManagerBuilder build)
-                throws Exception {
-            build.userDetailsService(userDetailsService)
-                    .passwordEncoder(new BCryptPasswordEncoder());
-            
-        }
-    
-    
-    
-    
-    
+            throws Exception {
+        build.userDetailsService(userDetailsService)
+                .passwordEncoder(new BCryptPasswordEncoder());
+
+    }
+
 }
